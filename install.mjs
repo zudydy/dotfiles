@@ -8,6 +8,7 @@ console.log("🔗 Linking dotfiles...");
 const dotfiles = [
   { src: "zsh/.zshrc", target: ".zshrc" },
   { src: "starship/starship.toml", target: ".config/starship.toml" },
+  { src: "wezterm/wezterm.lua", target: ".config/wezterm/wezterm.lua" },
 ];
 
 // 백업 함수
