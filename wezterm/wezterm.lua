@@ -14,6 +14,7 @@ config.automatically_reload_config = true
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
+config.enable_tab_bar = false
 
 config.font = wezterm.font_with_fallback({
 	{
@@ -26,6 +27,7 @@ config.font = wezterm.font_with_fallback({
 	},
 })
 config.font_size = 12
+config.line_height = 1.1
 
 config.color_scheme = "catppuccin-frappe"
 config.window_background_opacity = 0.9
