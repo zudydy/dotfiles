@@ -11,6 +11,10 @@ alias gs="git status"
 alias glf="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 alias wip="git add . && git commit -m "wip""
 alias unwip="git reset --soft HEAD^"
+alias gsm="git switch main"
+alias gsd="git switch develop"
+alias gsq="git switch qa"
+alias gsr="git switch release/CSRV-1225-cashwalk-cashreview-renewal"
 
 # logo-ls
 alias ls="logo-ls"
