@@ -18,7 +18,7 @@ $character\
 
 [username]
 style_root = 'bold red'
-style_user = 'bold purple'
+style_user = '#9E64F0'
 format = '[ zudydy]($style) in '
 show_always = true
 

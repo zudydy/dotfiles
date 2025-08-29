@@ -19,7 +19,7 @@ config.enable_tab_bar = false
 config.font = wezterm.font_with_fallback({
 	{
 		family = "JetBrains Mono",
-		weight = "Bold",
+		weight = 500,
 	},
 	{
 		family = "MesloLGS NF",
@@ -29,11 +29,27 @@ config.font = wezterm.font_with_fallback({
 config.font_size = 12
 config.line_height = 1.1
 
-config.color_scheme = "catppuccin-frappe"
-config.window_background_opacity = 0.9
-config.macos_window_background_blur = 50
+function scheme_for_appearance(appearance)
+	if appearance:find "Dark" then
+	  return "catppuccin-frappe"
+	else
+	  return "catppuccin-latte"
+	end
+  end
 
--- config.enable_tab_bar = false
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+
+-- 커스텀 배경색 설정
+config.colors = {
+	background = "#E6E8EF",
+}
+
+config.window_background_opacity = 0.7
+config.macos_window_background_blur = 100
+
+config.window_padding = {
+	top = 0,
+}
 
 config.inactive_pane_hsb = {
 	saturation = 1.0,
