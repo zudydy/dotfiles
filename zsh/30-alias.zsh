@@ -43,3 +43,6 @@ cd_warp() {
             ;;
     esac
 }
+
+# GitHub
+alias npr="gh pr create --web"
