@@ -15,6 +15,7 @@ alias gsm="git switch main"
 alias gsd="git switch develop"
 alias gsq="git switch qa"
 alias gsr="git switch release/CSRV-1225-cashwalk-cashreview-renewal"
+alias gcm="git commit -m"
 
 # logo-ls
 alias ls="logo-ls"
