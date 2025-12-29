@@ -177,32 +177,40 @@ config.keys = {
 	},
 }
 
+local function is_theme_dark()
+	return wezterm.gui.get_appearance():find("Dark") ~= nil
+end
+
+local function theme_palette()
+	if is_theme_dark() then
+		return {
+			bar_bg = "#303446",
+			tab_bg = "#414559",
+			tab_fg = "#C6D0F5",
+			active_bg = "#C6D0F5",
+			active_fg = "#303446",
+			hover_bg = "#51576D",
+		}
+	else
+		return {
+			bar_bg = "#E6E8EF",
+			tab_bg = "#DCE0E8",
+			tab_fg = "#4C4F69",
+			active_bg = "#4C4F69",
+			active_fg = "#EFF1F5",
+			hover_bg = "#CCD0DA",
+		}
+	end
+end
+
+
 wezterm.on("format-tab-title", function(tab, tabs, panes, config_, hover, max_width)
 	-- ===== 팔레트(너가 쓰던 거 그대로 두고, 여기선 예시만) =====
 	local function is_dark()
 	  return wezterm.gui.get_appearance():find("Dark") ~= nil
 	end
   
-	local c
-	if is_dark() then
-	  c = {
-		bar_bg = "#303446",
-		tab_bg = "#414559",
-		tab_fg = "#C6D0F5",
-		active_bg = "#C6D0F5",
-		active_fg = "#303446",
-		hover_bg = "#51576D",
-	  }
-	else
-	  c = {
-		bar_bg = "#E6E8EF",
-		tab_bg = "#DCE0E8",
-		tab_fg = "#4C4F69",
-		active_bg = "#4C4F69",
-		active_fg = "#EFF1F5",
-		hover_bg = "#CCD0DA",
-	  }
-	end
+	local c = theme_palette()
   
 	local active = tab.is_active
 	local bg = c.tab_bg
@@ -277,6 +285,32 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config_, hover, max_wi
 	  { Text = gap_text },
 	})
   end)
+
+  local function plus_button(state) -- "default" | "hover"
+	local c = theme_palette()
+	local bg = (state == "hover") and c.hover_bg or c.tab_bg
+	local fg = c.tab_fg
   
+	return wezterm.format({
+	  { Background = { Color = c.bar_bg } },
+	  { Foreground = { Color = bg } },
+	  { Text = "" },
+  
+	  { Background = { Color = bg } },
+	  { Foreground = { Color = fg } },
+	  { Text = " + " }, -- 여기만 원하는 아이콘/문구로 교체
+  
+	  { Background = { Color = c.bar_bg } },
+	  { Foreground = { Color = bg } },
+	  { Text = "" },
+  
+	  { Text = " " },
+	})
+  end
+  
+  config.tab_bar_style = {
+	new_tab = plus_button("default"),
+	new_tab_hover = plus_button("hover"),
+  }
 
 return config
