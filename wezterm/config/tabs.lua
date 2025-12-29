@@ -104,7 +104,7 @@ function M.setup_style(config)
 
             { Background = { Color = c.bar_bg } },
             { Foreground = { Color = bg } },
-            { Text = "" },
+            { Text = "" },
 
             { Text = " " },
         })
