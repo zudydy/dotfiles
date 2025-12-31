@@ -9,6 +9,8 @@ function M.setup(config)
     config.use_fancy_tab_bar = false
     config.tab_bar_at_bottom = true
     config.hide_tab_bar_if_only_one_tab = false
+    config.show_new_tab_button_in_tab_bar = false
+    config.tab_max_width = 30
 end
 
 function M.setup_events()
@@ -67,7 +69,7 @@ function M.setup_events()
 
         return wezterm.format({
             -- left edge
-            { Background = { Color = c.bar_bg } },
+            { Background = { Color = "transparent" } },
             { Foreground = { Color = bg } },
             { Text = LEFT_EDGE },
 
@@ -77,7 +79,7 @@ function M.setup_events()
             { Text = fixed_text .. title .. suffix_text },
 
             -- right edge (항상 남겨둠)
-            { Background = { Color = c.bar_bg } },
+            { Background = { Color = "transparent" } },
             { Foreground = { Color = bg } },
             { Text = RIGHT_EDGE },
 
