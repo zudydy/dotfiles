@@ -1,4 +1,6 @@
 plugins=(
+	fzf
+	fzf-tab
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
