@@ -9,6 +9,10 @@ const dotfiles = [
   { src: "zsh/.zshrc", target: ".zshrc" },
   { src: "starship/starship.toml", target: ".config/starship.toml" },
   { src: "wezterm/wezterm.lua", target: ".config/wezterm/wezterm.lua" },
+  {
+    src: "leader-key/config.json",
+    target: "Library/Application Support/Leader Key/config.json",
+  },
 ];
 
 // 백업 함수

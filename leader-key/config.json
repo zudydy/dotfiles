@@ -1,0 +1,84 @@
+{
+  "actions": [
+    {
+      "key": "a",
+      "type": "application",
+      "value": "/Applications/Arc.app"
+    },
+    {
+      "key": "c",
+      "type": "application",
+      "value": "/System/Applications/Calendar.app"
+    },
+    {
+      "key": "m",
+      "type": "application",
+      "value": "/System/Applications/Mail.app"
+    },
+    {
+      "key": "e",
+      "type": "application",
+      "value": "/Applications/Cursor.app"
+    },
+    {
+      "key": "w",
+      "type": "application",
+      "value": "/Applications/WezTerm.app"
+    },
+    {
+      "key": "n",
+      "type": "application",
+      "value": "/Applications/Notion.app"
+    },
+    {
+      "key": "f",
+      "type": "application",
+      "value": "/Applications/Figma.app"
+    },
+    {
+      "key": "g",
+      "type": "application",
+      "value": "/Applications/ChatGPT.app"
+    },
+    {
+      "key": "s",
+      "type": "application",
+      "value": "/Applications/Slack.app"
+    },
+    {
+      "key": "k",
+      "type": "application",
+      "value": "/Applications/KakaoTalk.app"
+    },
+    {
+      "iconPath": "/Applications/UTM.app",
+      "key": "u",
+      "type": "application",
+      "value": "/Applications/UTM.app"
+    },
+    {
+      "key": ",",
+      "type": "application",
+      "value": "/System/Applications/System Settings.app"
+    },
+    {
+      "actions": [
+        {
+          "key": "d",
+          "type": "application",
+          "value": "/Users/julyy/Downloads"
+        },
+        {
+          "key": "m",
+          "label": "전능 회의실",
+          "type": "url",
+          "value": "https://almighty-meeting-room-client.vercel.app"
+        }
+      ],
+      "key": "b",
+      "label": "Bookmark",
+      "type": "group"
+    }
+  ],
+  "type": "group"
+}
