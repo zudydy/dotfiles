@@ -19,6 +19,32 @@ alias gcm="git commit -m"
 alias gbb="git branch --sort=-committerdate \
   --format='%(if)%(HEAD)%(then)* %(color:green)%(committerdate:relative) - %(refname:short)%(color:reset)%(else)  %(committerdate:relative) - %(refname:short)%(end)'"
 
+gwp() {
+  emulate -L zsh
+  git rev-parse --is-inside-work-tree >/dev/null 2>&1 || { echo "Not a git repo"; return 1; }
+
+  local picked branch fmt
+  fmt=$'%(if)%(HEAD)%(then)%(color:green)* %(align:14,left)%(committerdate:relative)%(end)  %(refname:short)%(color:reset)%(else)  %(align:14,left)%(committerdate:relative)%(end)  %(refname:short)%(end)\x1f%(refname:short)'
+
+  picked=$(
+    git for-each-ref --color=always refs/heads \
+      --sort=-committerdate \
+      --format="$fmt" |
+    fzf --ansi \
+        --prompt='switch> ' \
+        --delimiter=$'\x1f' \
+        --with-nth=1 \
+        --no-sort \
+        --preview='b=$(printf "%s" {} | cut -d $'\''\x1f'\'' -f2); git log "$b" -n 50 --oneline --color=always' \
+        --preview-window='right:55%:wrap'
+  ) || return 1
+
+  branch=$(printf '%s' "$picked" | cut -d $'\x1f' -f2)
+  [[ -n "$branch" ]] || return 1
+
+  git switch "$branch"
+}
+
 # logo-ls
 alias ls="logo-ls"
 alias la="logo-ls -A"
