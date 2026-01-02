@@ -16,6 +16,8 @@ alias gsd="git switch develop"
 alias gsq="git switch qa"
 alias gsr="git switch release/CSRV-1225-cashwalk-cashreview-renewal"
 alias gcm="git commit -m"
+alias gbb="git branch --sort=-committerdate \
+  --format='%(if)%(HEAD)%(then)* %(color:green)%(committerdate:relative) - %(refname:short)%(color:reset)%(else)  %(committerdate:relative) - %(refname:short)%(end)'"
 
 # logo-ls
 alias ls="logo-ls"
