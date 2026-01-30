@@ -51,12 +51,6 @@
       "value": "/Applications/KakaoTalk.app"
     },
     {
-      "iconPath": "/Applications/UTM.app",
-      "key": "u",
-      "type": "application",
-      "value": "/Applications/UTM.app"
-    },
-    {
       "key": ",",
       "type": "application",
       "value": "/System/Applications/System Settings.app"
