@@ -19,6 +19,9 @@ alias gcm="git commit -m"
 alias gbb="git branch --sort=-committerdate \
   --format='%(if)%(HEAD)%(then)* %(color:green)%(committerdate:relative) - %(refname:short)%(color:reset)%(else)  %(committerdate:relative) - %(refname:short)%(end)'"
 
+# GitHub Desktop
+alias ogd="open -a \"GitHub Desktop\" ."
+
 gwp() {
   emulate -L zsh
   git rev-parse --is-inside-work-tree >/dev/null 2>&1 || { echo "Not a git repo"; return 1; }
