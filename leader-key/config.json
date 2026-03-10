@@ -6,14 +6,19 @@
       "value": "/Applications/Arc.app"
     },
     {
+      "key": "m",
+      "type": "application",
+      "value": "/System/Applications/Mail.app"
+    },
+    {
       "key": "c",
       "type": "application",
       "value": "/System/Applications/Calendar.app"
     },
     {
-      "key": "m",
+      "key": "r",
       "type": "application",
-      "value": "/System/Applications/Mail.app"
+      "value": "/System/Applications/Reminders.app"
     },
     {
       "key": "e",
@@ -31,7 +36,7 @@
       "value": "/Applications/Notion.app"
     },
     {
-      "key": "f",
+      "key": "d",
       "type": "application",
       "value": "/Applications/Figma.app"
     },
@@ -60,17 +65,16 @@
         {
           "key": "d",
           "type": "application",
-          "value": "/Users/julyy/Downloads"
+          "value": "/Users/jaeyeong/Downloads"
         },
         {
-          "key": "m",
-          "label": "전능 회의실",
-          "type": "url",
-          "value": "https://almighty-meeting-room-client.vercel.app"
+          "key": "s",
+          "type": "application",
+          "value": "/Users/jaeyeong/Library/Mobile Documents/com~apple~CloudDocs/SKKU/2026년 1학기"
         }
       ],
-      "key": "b",
-      "label": "Bookmark",
+      "key": "f",
+      "label": "Finder",
       "type": "group"
     }
   ],
