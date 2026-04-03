@@ -1,7 +1,7 @@
 {
   "actions": [
     {
-      "key": "a",
+      "key": "w",
       "type": "application",
       "value": "/Applications/Arc.app"
     },
@@ -31,19 +31,24 @@
       "value": "/Applications/WezTerm.app"
     },
     {
-      "key": "n",
+      "key": "a",
       "type": "application",
-      "value": "/Applications/Notion.app"
-    },
-    {
-      "key": "d",
-      "type": "application",
-      "value": "/Applications/Figma.app"
+      "value": "/Applications/Codex.app"
     },
     {
       "key": "g",
       "type": "application",
       "value": "/Applications/ChatGPT.app"
+    },
+    {
+      "key": "n",
+      "type": "application",
+      "value": "/Applications/Notion.app"
+    },
+    {
+      "key": "f",
+      "type": "application",
+      "value": "/Applications/Figma.app"
     },
     {
       "key": "s",
@@ -73,7 +78,7 @@
           "value": "/Users/jaeyeong/Library/Mobile Documents/com~apple~CloudDocs/SKKU/2026년 1학기"
         }
       ],
-      "key": "f",
+      "key": "/",
       "label": "Finder",
       "type": "group"
     }
