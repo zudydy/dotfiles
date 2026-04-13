@@ -1,7 +1,7 @@
 {
   "actions": [
     {
-      "key": "w",
+      "key": "a",
       "type": "application",
       "value": "/Applications/Arc.app"
     },
@@ -31,12 +31,12 @@
       "value": "/Applications/WezTerm.app"
     },
     {
-      "key": "a",
+      "key": "x",
       "type": "application",
       "value": "/Applications/Codex.app"
     },
     {
-      "key": "g",
+      "key": "z",
       "type": "application",
       "value": "/Applications/ChatGPT.app"
     },
@@ -51,9 +51,9 @@
       "value": "/Applications/Figma.app"
     },
     {
-      "key": "s",
+      "key": "d",
       "type": "application",
-      "value": "/Applications/Slack.app"
+      "value": "/Applications/Discord.app"
     },
     {
       "key": "k",
